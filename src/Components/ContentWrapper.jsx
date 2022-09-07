@@ -19,7 +19,9 @@ const ContentWrapper = () => {
             </div>
             {/* End of MainContent */}
 
-            <Footer />
+            <Footer titulo="Hola" >
+                <span>Copyright &copy; Dashboard 2021</span>
+            </Footer>
 
         {/* End of Content Wrapper */}
         </div>

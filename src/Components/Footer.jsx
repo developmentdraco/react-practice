@@ -1,4 +1,4 @@
-const Footer = () => {
+const Footer = ( props ) => {
 
     return (
             
@@ -6,7 +6,7 @@ const Footer = () => {
             {/* Footer */}
             <div className="container my-auto">
                 <div className="copyright text-center my-auto">
-                    <span>Copyright &copy; Dashboard 2021</span>
+                    { props.children }
                 </div>
             </div>
             {/* End of Footer */}

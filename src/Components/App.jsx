@@ -1,23 +1,24 @@
-import '../assets/css/app.css';
-
-import Sidebar from './Sidebar';
-import ContentWrapper from './ContentWrapper';
-
-import DarthVader from '../assets/images/darth-vader.jpg';
-import Stormtrooper from '../assets/images/stormtrooper.jpg';
+import { BrowserRouter, Routes, Route, } from 'react-router-dom';
+import Index from './Index';
+import Contact from './Contact';
+import Error from './Error';
+import '../Styles/app.css';
+import '../Styles/general.css';
 
 const App = () => {
 
     return(
-
-        <div id="wrapper">
-
-            <Sidebar />
-            <ContentWrapper />
-
-        {/* End of Page Wrapper */}
-        </div>
         
+        <BrowserRouter>
+            <Routes>
+
+                <Route exact={ true } path='/' element={ <Index /> } />
+                <Route path='/contact' element={ <Contact /> } />
+                <Route path='*' element={ <Error /> }/>
+
+            </Routes>
+        </BrowserRouter>
+
     );
 
 }
